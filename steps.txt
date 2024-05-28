@@ -1,0 +1,4 @@
+--------------------------------------------------------FE--------------------------------------------------------
+initialize the project -> npx create-next-app@latest .
+npm i
+start the app -> npm run dev
