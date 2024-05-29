@@ -1,6 +1,6 @@
-const AboutPage = () => {
-    return <div>AboutPage</div>;
+const ContactPage = () => {
+    return <div>ContactPage</div>;
   };
   
-  export default AboutPage;
+  export default ContactPage;
   
