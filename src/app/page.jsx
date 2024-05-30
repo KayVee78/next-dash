@@ -7,8 +7,8 @@ const HomePage = () => {
       <div className={styles.textContainer}>
         <h1 className={styles.title}>Visionary Ideas Studio</h1>
         <p className={styles.desc}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-          mollitia, molestiae quas vel sint commodi.
+          Bringing your ideas to life with innovative digital solutions and
+          unmatched creative expertise.
         </p>
         <div className={styles.buttonContainer}>
           <button className={styles.button}>Learn More</button>
