@@ -33,7 +33,7 @@
 }
 
 .button:first-child{
-    background-color: var(--btn);
+    background-color: var(--btnBlue);
     color: var(--text);
 }
 
