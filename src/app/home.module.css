@@ -1,50 +1,70 @@
-.container{
-    display: flex;
-    gap: 100px;
-
+.container {
+  display: flex;
+  gap: 100px;
 }
 
-.textContainer{
-    flex: 1;
-    display: flex;
+.textContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.title {
+  font-size: 86px;
+}
+
+.desc {
+  font-size: 18px;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 20px;
+}
+
+.button {
+  padding: 20px;
+  min-width: 120px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.button:first-child {
+  background-color: var(--btnBlue);
+  color: var(--text);
+}
+
+.brands {
+  width: 250px;
+  height: 50px;
+  position: relative;
+  filter: grayscale(1);
+}
+
+.imageContainer {
+  flex: 1;
+  position: relative;
+}
+
+@media (max-width: 1024) {
+  .container {
     flex-direction: column;
-    gap: 50px;
+    text-align: center;
+  }
+
+  .buttonContainer {
+    justify-content: center;
+  }
 }
 
-.title{
-    font-size: 86px;
-}
+@media (max-width: 768px) {
+  .title {
+    font-size: 64px;
+  }
 
-.desc{
-    font-size: 18px;
-}
-
-.buttonContainer{
-    display: flex;
-    gap: 20px;
-}
-
-.button{
-    padding: 20px;
-    min-width: 120px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-}
-
-.button:first-child{
-    background-color: var(--btnBlue);
-    color: var(--text);
-}
-
-.brands{
-    width: 250px;
-    height: 50px;
-    position: relative;
-    filter: grayscale(1);
-}
-
-.imageContainer{
-    flex: 1;
-    position: relative;
+  .brands {
+    width: 100%;
+  }
 }
