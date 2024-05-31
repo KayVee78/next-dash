@@ -2,6 +2,8 @@ import Image from "next/image";
 import styles from "./about.module.css";
 
 const AboutPage = () => {
+  // console.log("Check if this is logged in  client or server console");
+
   return (
     <div className={styles.container}>
       <div className={styles.textContainer}>
