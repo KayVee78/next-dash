@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import styles from "./contact.module.css";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 // const HydrationTestNoSSR = dynamic(() => import("@/components/hydrationTest"), {
 //   ssr: false,
