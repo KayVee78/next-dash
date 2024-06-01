@@ -4,4 +4,4 @@ npm i
 start the app -> npm run dev
 
 
-For testing purposes --> use jsonplaceholder API
+For testing purposes --> use jsonplaceholder API (https://jsonplaceholder.typicode.com/)
