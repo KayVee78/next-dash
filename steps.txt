@@ -5,3 +5,15 @@ start the app -> npm run dev
 
 
 For testing purposes --> use jsonplaceholder API (https://jsonplaceholder.typicode.com/)
+
+
+--------------------------------------------------------DB--------------------------------------------------------
+Use Mongo DB -> atlas
+Create a user if not available -> security > database access
+Create a IP address -> security > network access (If your deploy we must change the IP address to the server IP address)
+For now: choose allow from anywhere
+
+install -> npm install mongodb (we don't install mongodb)
+user mongoose instead of mongodb -> npm install mongoose@8.0.0
+connection string -> mongodb+srv://kayvee:<password>@cluster0.kleaa0d.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+(Don't include special characters for password)
