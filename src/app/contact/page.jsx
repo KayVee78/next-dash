@@ -7,6 +7,11 @@ import Image from "next/image";
 //   ssr: false,
 // });
 
+export const metadata = {
+  title: "Contact Page",
+  description: "Contact description",
+};
+
 const ContactPage = () => {
   // const [isClient, setIsClient] = useState(false);
   // useEffect(() => {
