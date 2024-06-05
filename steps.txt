@@ -6,6 +6,9 @@ start the app -> npm run dev
 
 For testing purposes --> use jsonplaceholder API (https://jsonplaceholder.typicode.com/)
 
+npm install moment (to format date)
+
+(If the Application data are not rendered properly, stop the server -> delete the -> .next folder -> npm run build -> npm run dev)
 
 --------------------------------------------------------DB--------------------------------------------------------
 Use Mongo DB -> atlas
@@ -17,3 +20,8 @@ install -> npm install mongodb (we don't install mongodb)
 user mongoose instead of mongodb -> npm install mongoose@8.0.0
 connection string -> mongodb+srv://kayvee:<password>@cluster0.kleaa0d.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 (Don't include special characters for password)
+
+
+--------------------------------------------------------BE--------------------------------------------------------
+For Authentication we use Auth.js (refer documentation)
+npm i next-auth@5.0.0-beta.3

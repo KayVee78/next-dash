@@ -3,17 +3,18 @@ import styles from "./singlePost.module.css";
 import PostUser from "@/components/postUser/postUser";
 import { Suspense } from "react";
 import { getPost } from "@/lib/data";
+import moment from "moment";
 
 //FETCHING DATA USING AN API
-// const getData = async (slug) => {
-//   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`);
+const getData = async (slug) => {
+  const res = await fetch(`http://localhost:3000/api/blog/${slug}`);
 
-//   if (!res.ok) {
-//     throw new Error("Failed to fetch data");
-//   }
+  if (!res.ok) {
+    throw new Error("Something went wrong");
+  }
 
-//   return res.json();
-// };
+  return res.json();
+};
 
 export const generateMetaData = async ({ params }) => {
   const { slug } = params;
@@ -26,14 +27,13 @@ export const generateMetaData = async ({ params }) => {
 };
 
 const SinglePostPage = async ({ params }) => {
-  console.log(params);
   const { slug } = params;
 
   //FETCHING DATA USING AN API
-  // const post = await getData(slug);
+  const post = await getData(slug);
 
   //FETCHING DATA WITHOUT  USING AN API
-  const post = await getPost(slug);
+  // const post = await getPost(slug);
 
   return (
     <div className={styles.container}>
@@ -53,7 +53,7 @@ const SinglePostPage = async ({ params }) => {
           <div className={styles.detailText}>
             <span className={styles.detailTitle}>Published</span>
             <span className={styles.detailValue}>
-              {post?.createdAt?.toString().slice(4, 16)}
+              {moment(post?.createdAt).format("MMMM DD, YYYY")}
             </span>
           </div>
         </div>
