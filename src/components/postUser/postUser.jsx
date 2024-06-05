@@ -25,7 +25,7 @@ const PostUser = async ({ userId }) => {
   return (
     <div className={styles.container}>
       <Image
-        src={user.img ? user.img : "/men-avatar.png"}
+        src={user?.img ? user.img : "/men-avatar.png"}
         className={styles.avatar}
         alt=""
         width={50}
