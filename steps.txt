@@ -10,6 +10,8 @@ npm install moment (to format date)
 
 (If the Application data are not rendered properly, stop the server -> delete the -> .next folder -> npm run build -> npm run dev)
 
+When registering to hash passwords -> npm i bcryptjs
+
 --------------------------------------------------------DB--------------------------------------------------------
 Use Mongo DB -> atlas
 Create a user if not available -> security > database access
