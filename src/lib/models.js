@@ -4,7 +4,7 @@ const userSchema = new mongoose.Schema(
   {
     username: { type: String, required: true, unique: true, min: 3, max: 20 },
     email: { type: String, required: true, unique: true, max: 75 },
-    password: { type: String, required: true, min: 6 },
+    password: { type: String },
     img: { type: String },
     isAdmin: { type: Boolean, default: false },
   },
@@ -23,5 +23,5 @@ const postSchema = new mongoose.Schema(
 );
 
 // Creating users and posts
-export const User = mongoose.models.User || mongoose.model("User", userSchema); //If there's an existing user use it, if not create a new user
-export const Post = mongoose.models.Post || mongoose.model("Post", postSchema);
+export const User = mongoose.models?.User || mongoose.model("User", userSchema); //If there's an existing user use it, if not create a new user
+export const Post = mongoose.models?.Post || mongoose.model("Post", postSchema);
