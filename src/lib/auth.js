@@ -8,13 +8,14 @@ import bcrypt from "bcryptjs";
 const login = async (credentials) => {
   try {
     connectToDb();
+    console.log("credentials", credentials);
     const user = await User.findOne({ username: credentials.username });
 
     if (!user) {
       throw new Error("Incorrect username or password");
     }
 
-    const isPasswordCorrect = await bcrypt.compare(credentials.password);
+    const isPasswordCorrect = await bcrypt.compare(credentials.password, user.password);
     if (!isPasswordCorrect) {
       throw new Error("Incorrect username or password");
     }
