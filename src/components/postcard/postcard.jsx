@@ -5,20 +5,23 @@ import moment from "moment";
 
 //to get the postcards horizontally and when the screen hasn't enough space, to move to the next row (use flex box and flex wrap)
 const PostCard = async ({ post }) => {
+  console.log(post);
   return (
     <div className={styles.container}>
       <div className={styles.top}>
         <div className={styles.imgContainer}>
           {post.img && (
             <Image
-              src={post.img}
+              src={post?.img && post.img !== "" ? post.img : "/no-img.jpg"}
               alt=""
               fill
               className={styles.img}
             />
           )}
         </div>
-        <span className={styles.date}>{moment(post?.createdAt).format('MMMM DD, YYYY')}</span>
+        <span className={styles.date}>
+          {moment(post?.createdAt).format("MMMM DD, YYYY")}
+        </span>
       </div>
       <div className={styles.bottom}>
         <h1 className={styles.title}>{post.title}</h1>

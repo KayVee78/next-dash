@@ -35,11 +35,18 @@ const SinglePostPage = async ({ params }) => {
   //FETCHING DATA WITHOUT  USING AN API
   // const post = await getPost(slug);
 
+  console.log(post);
+
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
         {post?.img && (
-          <Image src={post?.img} alt="" fill className={styles.img} />
+          <Image
+            src={post?.img && post.img !== "" ? post.img : "/no-img.jpg"}
+            alt=""
+            fill
+            className={styles.img}
+          />
         )}
       </div>
       <div className={styles.textContainer}>
