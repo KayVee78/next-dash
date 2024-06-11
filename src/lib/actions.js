@@ -58,10 +58,14 @@ export const addUser = async (prevState, formData) => {
 
   try {
     connectToDb();
+
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+
     const newUser = new User({
       username,
       email,
-      password,
+      password: hashedPassword,
       img,
     });
     await newUser.save();
@@ -135,6 +139,7 @@ export const register = async (previousState, formData) => {
 export const login = async (previousState, formData) => {
   const { username, password } = Object.fromEntries(formData);
 
+  console.log(username, password);
   try {
     await signIn("credentials", { username, password });
   } catch (error) {
