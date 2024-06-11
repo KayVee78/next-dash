@@ -54,6 +54,7 @@ export const addUser = async (prevState, formData) => {
     email,
     password,
     img = "/men-avatar.png",
+    isAdmin = false,
   } = Object.fromEntries(formData);
 
   try {
@@ -67,6 +68,7 @@ export const addUser = async (prevState, formData) => {
       email,
       password: hashedPassword,
       img,
+      isAdmin
     });
     await newUser.save();
     console.log("save to db");
