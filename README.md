@@ -28,6 +28,9 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
+    <li>
+      <a href="#view-app">View App</a>
+    </li>
   </ol>
 </details>
 
@@ -84,6 +87,11 @@ Admins are allowed to sign-in using credentials or Github authorization, login, 
    ```sh
    npm run dev
    ```
+<!-- View App -->
+## View App
+
+Visit : <a>https://next-dash-kayvee.vercel.app/</a>
+
 ![image](https://github.com/KayVee78/next-dash/assets/90994452/b9ecd0b8-b750-458f-a16f-b0b00597d608)
 
 ![image](https://github.com/KayVee78/next-dash/assets/90994452/0723cc4c-d9d2-4a40-8745-7f0d097b37d4)
