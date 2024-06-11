@@ -7,7 +7,7 @@ import moment from "moment";
 
 //FETCHING DATA USING AN API
 const getData = async (slug) => {
-  const res = await fetch(`http://localhost:3000/api/blog/${slug}`);
+  const res = await fetch(`${process.env.APP_URL}/api/blog/${slug}`);
 
   if (!res.ok) {
     throw new Error("Something went wrong");
@@ -34,8 +34,6 @@ const SinglePostPage = async ({ params }) => {
 
   //FETCHING DATA WITHOUT  USING AN API
   // const post = await getPost(slug);
-
-  console.log(post);
 
   return (
     <div className={styles.container}>
