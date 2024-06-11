@@ -67,7 +67,7 @@ Admins are allowed to sign-in using credentials or Github authorization, login, 
   
 * MongoDB
   ```sh
-  Create a new cluster,  database and the necessary collections in MongoDB Atlas
+  Create a new cluster, database and the necessary collections in MongoDB Atlas
   
   
 ### Installation
