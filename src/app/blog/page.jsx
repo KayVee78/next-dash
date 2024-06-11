@@ -4,7 +4,7 @@ import { getPosts } from "@/lib/data";
 
 //FETCHING DATA USING AN API
 const getData = async () => {
-  const res = await fetch("http://localhost:3000/api/blog", {
+  const res = await fetch(`${process.env.APP_URL}/api/blog`, {
     next: { revalidate: 3600 },
   });
 

@@ -9,7 +9,6 @@ import { authConfig } from "./auth.config";
 const login = async (credentials) => {
   try {
     connectToDb();
-    console.log("credentials", credentials);
     const user = await User.findOne({ username: credentials.username });
 
     if (!user) {
@@ -55,7 +54,6 @@ export const {
   ],
   callbacks: {
     async signIn({ user, account, profile }) {
-      console.log("profile", profile);
       if (account?.provider === "github") {
         connectToDb();
         try {

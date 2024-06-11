@@ -5,7 +5,7 @@ import moment from "moment";
 
 //to get the postcards horizontally and when the screen hasn't enough space, to move to the next row (use flex box and flex wrap)
 const PostCard = async ({ post }) => {
-  console.log(post);
+
   return (
     <div className={styles.container}>
       <div className={styles.top}>
