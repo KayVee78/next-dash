@@ -1,5 +1,6 @@
 import styles from "./home.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const HomePage = () => {
   return (
@@ -11,8 +12,14 @@ const HomePage = () => {
           unmatched creative expertise.
         </p>
         <div className={styles.buttonContainer}>
-          <button className={styles.button}>Learn More</button>
-          <button className={styles.button}>Contact</button>
+          <Link href="/about">
+            <button className={`${styles.button} ${styles.buttonLeanMore}`}>
+              Learn More
+            </button>
+          </Link>
+          <Link href="/contact">
+            <button className={styles.button}>Contact</button>
+          </Link>
         </div>
         <div className={styles.brands}>
           <Image src="/brands.png" alt="" fill className={styles.brandImg} />
