@@ -4,9 +4,11 @@ import { getPosts } from "@/lib/data";
 
 //FETCHING DATA USING AN API
 const getData = async () => {
-  const res = await fetch(`${process.env.APP_URL}/api/blog`, {
-    next: { revalidate: 3600 },
-  });
+  //revalidate after every 1 hour
+  // const res = await fetch(`${process.env.APP_URL}/api/blog`, {
+  //   next: { revalidate: 3600 },
+  // });
+  const res = await fetch(`${process.env.APP_URL}/api/blog`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
